@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ریلز انیمیشنی با Claude Code · هدیه‌ی UO</title>
+<meta name="description" content="شش قدم. چهارتای اولش فقط یه بار انجام میشه.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="ریلز انیمیشنی با Claude Code">
+<meta property="og:description" content="شش قدم. چهارتای اولش فقط یه بار انجام میشه.">
+<meta property="og:image" content="https://uoagency.github.io/reel/cover.png">
+<meta name="theme-color" content="#0f0e0c">
+<link rel="icon" href="../assets/uo.png">
+<link rel="preload" href="../assets/Vazirmatn-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Vazirmatn;src:url(../assets/Vazirmatn-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Vazirmatn;src:url(../assets/Vazirmatn-SemiBold.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:Vazirmatn;src:url(../assets/Vazirmatn-Bold.woff2) format("woff2");font-weight:800;font-display:swap}
+:root{--bg:#0f0e0c;--card:#191612;--line:rgba(255,205,155,.13);--ink:#f7f0e4;--muted:#b6a999;--faint:#837763;
+--accent:#ff7a1a;--accent2:#ffb648;--ph:rgba(255,182,72,.16)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.9;font-size:17px;
+padding:0 18px env(safe-area-inset-bottom);background-image:radial-gradient(600px 300px at 85% -60px,rgba(255,122,26,.16),transparent 70%)}
+.wrap{max-width:620px;margin:0 auto;padding:22px 0 40px}
+header{display:flex;align-items:center;gap:10px;margin-bottom:34px}
+header img{width:38px;height:38px;border-radius:50%}
+header span{font-weight:600;color:var(--muted);font-size:15px;direction:ltr}
+.kicker{color:var(--accent);font-weight:800;font-size:15px;margin-bottom:8px}
+h1{font-size:clamp(32px,9vw,46px);line-height:1.35;font-weight:800;margin-bottom:12px}
+.sub{color:var(--muted);font-size:18px;margin-bottom:30px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 20px;margin-bottom:16px}
+.label{display:inline-block;color:var(--accent);font-weight:800;font-size:14px;margin-bottom:4px}
+h2{font-size:23px;line-height:1.5;font-weight:800;margin-bottom:12px}
+ol.items{padding-right:0;list-style:none;counter-reset:n}
+ol.items[start]{counter-reset:n var(--s)}
+ol.items li{counter-increment:n;position:relative;padding:10px 44px 10px 0;border-top:1px solid var(--line)}
+ol.items li:first-child{border-top:0}
+ol.items li::before{content:counter(n,persian);position:absolute;right:0;top:10px;width:30px;height:30px;border-radius:50%;
+background:rgba(255,122,26,.14);color:var(--accent2);font-weight:800;font-size:15px;display:grid;place-items:center;line-height:1}
+.note{color:var(--muted);font-size:15.5px;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}
+.rule{border-color:rgba(255,122,26,.45);background:linear-gradient(160deg,rgba(255,122,26,.12),var(--card) 60%)}
+.big{font-size:23px;font-weight:800;line-height:1.6;margin:4px 0 10px}
+.line{color:var(--ink);margin-bottom:10px}
+.tip{color:var(--accent2);font-weight:600}
+.block{position:relative;background:rgba(0,0,0,.25);border:1px solid var(--line);border-radius:14px;padding:14px 14px 50px;margin-bottom:10px}
+.copy{position:absolute;left:10px;bottom:10px;font:inherit;font-size:14px;font-weight:600;color:#1a0e04;background:var(--accent2);
+border:0;border-radius:999px;padding:3px 16px;cursor:pointer}
+.copy.ok{background:#8fd18b}
+.who{font-size:13px;color:var(--faint);margin:6px 4px 2px}
+.who.me{text-align:left}
+.bubble{border-radius:18px;padding:10px 14px;max-width:88%}
+.bubble.them{background:#2a251e;border-top-right-radius:6px}
+.bubble.me{position:relative;background:rgba(255,122,26,.16);border:1px solid rgba(255,122,26,.3);margin-right:auto;border-top-left-radius:6px;padding-bottom:46px}
+.qa{padding:10px 0;border-top:1px solid var(--line)}
+.qa:first-of-type{border-top:0}
+.q{font-weight:800}
+.a{color:var(--muted)}
+ul.plain{list-style:none}ul.plain li{padding:6px 0;border-top:1px solid var(--line)}ul.plain li:first-child{border-top:0}
+.card a{color:var(--accent2);word-break:break-all}
+.ph{background:var(--ph);color:var(--accent2);border-radius:6px;padding:0 4px}
+.how{color:var(--faint);font-size:14px;margin:-14px 0 24px}
+.end{text-align:center;margin-top:30px;padding:26px 18px;border-radius:22px;border:1px solid var(--line)}
+.end p{color:var(--muted);margin-bottom:14px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;color:#1a0e04;background:linear-gradient(90deg,var(--accent2),var(--accent));
+border-radius:999px;padding:10px 26px;margin:4px}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line-strong,rgba(255,195,140,.3));font-weight:600}
+footer{text-align:center;color:var(--faint);font-size:13px;margin-top:22px}
+footer a{color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><img src="../assets/uo.png" alt="UO"><span>@uoagency.ir</span></header>
+<div class="kicker">هدیه‌ی UO · کلمه‌ی «۶»</div>
+<h1>ریلز انیمیشنی با Claude Code</h1>
+<p class="sub">شش قدم. چهارتای اولش فقط یه بار انجام میشه.</p>
+<p class="how">متن‌هایی که دکمه‌ی «کپی» دارن رو با یه لمس بردار.</p>
+<section class="card"><div class="label">قدم ۱ تا ۳</div><h2>یه بار راه‌اندازی</h2><ol class="items"><li>اپ دسکتاپ Claude رو نصب کن. نسخه‌ی مرورگر به فایل‌هات دسترسی نداره. (توی ایران VPN می‌خواد و Claude Code فقط توی اشتراک پولی هست.)</li><li>یه فولدر جدید بساز به اسم <bdi dir="ltr">Reel Studio</bdi>.</li><li>توی اپ برو بخش Code، یه چت جدید باز کن، Local رو بزن و همون فولدر رو انتخاب کن.</li></ol><p class="note">از این به بعد هرچی Claude می‌سازه توی همین فولدر می‌مونه.</p></section><section class="card"><div class="label">قدم ۴</div><h2>پرامپت راه‌اندازی (یه بار پیستش کن)</h2><div class="block"><p>توی همین فولدر یه کارگاه ساخت ریل برام راه بنداز. مرحله‌به‌مرحله برو و قبل از نصب هر چیزی بهم بگو.<br><br>۱. ابزارها رو چک کن و هر کدوم نبود نصب کن:<br>- Node.js نسخه‌ی ۲۲ به بالا و FFmpeg<br>- Python نسخه‌ی ۳.۱۰ به بالا<br>- HyperFrames (با npx hyperframes) برای ساختن ویدیو از HTML<br>- edge-tts برای صدای فارسی رایگان<br>- faster-whisper برای درآوردن زمان دقیق هر کلمه<br>بعد یه تست کوتاه بگیر: یه جمله‌ی فارسی رو صدا کن، زمان کلمه‌هاشو دربیار و یه ویدیوی ۳ ثانیه‌ای رندر کن. اگه چیزی کار نکرد، اول درستش کن.<br><br>۲. این‌ها رو ازم بپرس و جواب‌ها رو توی فایل brand.md ذخیره کن:<br>- صدا: fa-IR-DilaraNeural (زن) یا fa-IR-FaridNeural (مرد)، یا ElevenLabs اگه کلیدشو دارم. از هر کدوم یه نمونه‌ی کوتاه بساز که گوش بدم.<br>- رنگ اصلی، رنگ پس‌زمینه و رنگ متن (کد hex)<br>- فونت فارسی: مسیر فایل فونت روی سیستمم<br>- اسم پیج و کلمه‌ای که آخر ویدیو می‌گم کامنت کنن<br><br>۳. یه دستور به اسم <bdi dir="ltr">/reel</bdi> بساز (فایل <bdi dir="ltr">.claude/commands/reel.md</bdi>) که موضوع ریل رو تو یه خط بگیره و این کارها رو بکنه:<br>الف) اسکریپت فارسی محاوره‌ای ۳۰ تا ۶۰ ثانیه بنویسه. جمله‌ی اول هوک باشه و تنها هم معنی بده. نشونم بده و تا تأیید نکردم جلو نره.<br>ب) صدا رو با صدای brand.md بسازه. کلمه‌های انگلیسی رو برای خوندن با حروف فارسی بنویسه که درست تلفظ بشن، ولی توی زیرنویس انگلیسی بمونن. بعد با faster-whisper زمان هر کلمه رو دربیاره.<br>ج) استوری‌بورد بنویسه: برای هر جمله چی روی صفحه حرکت می‌کنه. هر جمله یه حرکت، نه اسلاید ثابت. نشونم بده و صبر کنه.<br>د) با HyperFrames ویدیوی عمودی ۱۰۸۰ در ۱۹۲۰ بسازه. هر حرکت دقیقاً روی کلمه‌ای شروع بشه که گفته میشه. زیرنویس کلمه‌به‌کلمه و راست‌چین باشه، رنگ و فونت از brand.md، و یه موزیک آروم زیر صدا.<br>ه) کار خودشو چک کنه: npx hyperframes check رو اجرا کنه، از چند لحظه‌ی ویدیو عکس بگیره و خودش نگاه کنه که متنی بیرون نزده، روی هم نیفتاده و زیر دکمه‌های اینستاگرام نرفته. هر ایرادی دید درست کنه.<br>و) توی پوشه‌ی reels رندر بگیره و بگه فایل کجاست.<br><br>۴. اگه بعداً ایراد گرفتم، مثلاً «هوکو بزرگ‌تر کن»، فقط همون قسمت عوض بشه. دوباره چک کن و رندر بگیر و به بقیه‌ی ویدیو دست نزن.<br><br>آخر کار کوتاه بگو چی نصب شد و <bdi dir="ltr">/reel</bdi> چطور کار می‌کنه.</p><button class="copy" type="button" data-copy="توی همین فولدر یه کارگاه ساخت ریل برام راه بنداز. مرحله‌به‌مرحله برو و قبل از نصب هر چیزی بهم بگو.
+
+۱. ابزارها رو چک کن و هر کدوم نبود نصب کن:
+- Node.js نسخه‌ی ۲۲ به بالا و FFmpeg
+- Python نسخه‌ی ۳.۱۰ به بالا
+- HyperFrames (با npx hyperframes) برای ساختن ویدیو از HTML
+- edge-tts برای صدای فارسی رایگان
+- faster-whisper برای درآوردن زمان دقیق هر کلمه
+بعد یه تست کوتاه بگیر: یه جمله‌ی فارسی رو صدا کن، زمان کلمه‌هاشو دربیار و یه ویدیوی ۳ ثانیه‌ای رندر کن. اگه چیزی کار نکرد، اول درستش کن.
+
+۲. این‌ها رو ازم بپرس و جواب‌ها رو توی فایل brand.md ذخیره کن:
+- صدا: fa-IR-DilaraNeural (زن) یا fa-IR-FaridNeural (مرد)، یا ElevenLabs اگه کلیدشو دارم. از هر کدوم یه نمونه‌ی کوتاه بساز که گوش بدم.
+- رنگ اصلی، رنگ پس‌زمینه و رنگ متن (کد hex)
+- فونت فارسی: مسیر فایل فونت روی سیستمم
+- اسم پیج و کلمه‌ای که آخر ویدیو می‌گم کامنت کنن
+
+۳. یه دستور به اسم /reel بساز (فایل .claude/commands/reel.md) که موضوع ریل رو تو یه خط بگیره و این کارها رو بکنه:
+الف) اسکریپت فارسی محاوره‌ای ۳۰ تا ۶۰ ثانیه بنویسه. جمله‌ی اول هوک باشه و تنها هم معنی بده. نشونم بده و تا تأیید نکردم جلو نره.
+ب) صدا رو با صدای brand.md بسازه. کلمه‌های انگلیسی رو برای خوندن با حروف فارسی بنویسه که درست تلفظ بشن، ولی توی زیرنویس انگلیسی بمونن. بعد با faster-whisper زمان هر کلمه رو دربیاره.
+ج) استوری‌بورد بنویسه: برای هر جمله چی روی صفحه حرکت می‌کنه. هر جمله یه حرکت، نه اسلاید ثابت. نشونم بده و صبر کنه.
+د) با HyperFrames ویدیوی عمودی ۱۰۸۰ در ۱۹۲۰ بسازه. هر حرکت دقیقاً روی کلمه‌ای شروع بشه که گفته میشه. زیرنویس کلمه‌به‌کلمه و راست‌چین باشه، رنگ و فونت از brand.md، و یه موزیک آروم زیر صدا.
+ه) کار خودشو چک کنه: npx hyperframes check رو اجرا کنه، از چند لحظه‌ی ویدیو عکس بگیره و خودش نگاه کنه که متنی بیرون نزده، روی هم نیفتاده و زیر دکمه‌های اینستاگرام نرفته. هر ایرادی دید درست کنه.
+و) توی پوشه‌ی reels رندر بگیره و بگه فایل کجاست.
+
+۴. اگه بعداً ایراد گرفتم، مثلاً «هوکو بزرگ‌تر کن»، فقط همون قسمت عوض بشه. دوباره چک کن و رندر بگیر و به بقیه‌ی ویدیو دست نزن.
+
+آخر کار کوتاه بگو چی نصب شد و /reel چطور کار می‌کنه.">کپی</button></div><p class="note">وسط کار سؤال می‌پرسه و نمونه‌ی صدا برات می‌سازه. جواب بده تا تموم بشه.</p></section><section class="card"><div class="label">قدم ۵</div><h2>ساختن ریل</h2><div class="block"><p>«<bdi dir="ltr">/reel</bdi> چطور کاری کنیم ChatGPT کسب‌وکارمونو پیشنهاد بده»</p><button class="copy" type="button" data-copy="«/reel چطور کاری کنیم ChatGPT کسب‌وکارمونو پیشنهاد بده»">کپی</button></div><p class="note">اسکریپت و استوری‌بورد رو قبل از ساختن نشونت میده. تا تأیید نکنی جلو نمیره.</p></section><section class="card"><div class="label">قدم ۶</div><h2>ایراد گرفتن مثل وقتی با تدوینگر حرف می‌زنی</h2><ul class="plain"><li>«قشنگش کن» نگو.</li><li>بگو: «هوکو بزرگ‌تر کن.»</li><li>بگو: «صحنه‌ی ۳، متن نیم ثانیه دیر میاد.»</li></ul><p class="note">هر بار یه ایراد. پنج تا ایراد با هم، یکیشو خراب می‌کنه.</p></section>
+<div class="end">
+<p>هر هفته یه چیز به‌دردبخور دیگه برای کسب‌وکارت می‌ذاریم.</p>
+<a class="btn" href="https://instagram.com/uoagency.ir">فالو <bdi dir="ltr">@uoagency.ir</bdi></a>
+<a class="btn ghost" id="share" href="#">بفرست برای یه دوست</a>
+</div>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+  var t=b.getAttribute('data-copy');
+  function done(){b.textContent='کپی شد';b.classList.add('ok');setTimeout(function(){b.textContent='کپی';b.classList.remove('ok')},1600)}
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,fallback)}else{fallback()}
+  function fallback(){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();
+    try{document.execCommand('copy');done()}catch(e){}a.remove()}
+})});
+var sh=document.getElementById('share');
+if(sh){if(navigator.share){sh.addEventListener('click',function(e){e.preventDefault();
+  navigator.share({title:document.title,url:location.href}).catch(function(){})})}else{sh.remove()}}
+</script>
+</body>
+</html>
