@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>۵ کانکتور Claude و طرز وصل کردنشون · هدیه‌ی UO</title>
+<meta name="description" content="دو راه داری: با چند کلیک توی خود اپ Claude، یا با یه پرامپت توی Claude Code.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="۵ کانکتور Claude و طرز وصل کردنشون">
+<meta property="og:description" content="دو راه داری: با چند کلیک توی خود اپ Claude، یا با یه پرامپت توی Claude Code.">
+<meta property="og:image" content="https://uoagency.github.io/konektor/cover.png">
+<meta name="theme-color" content="#0f0e0c">
+<link rel="icon" href="../assets/uo.png">
+<link rel="preload" href="../assets/Vazirmatn-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Vazirmatn;src:url(../assets/Vazirmatn-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Vazirmatn;src:url(../assets/Vazirmatn-SemiBold.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:Vazirmatn;src:url(../assets/Vazirmatn-Bold.woff2) format("woff2");font-weight:800;font-display:swap}
+:root{--bg:#0f0e0c;--card:#191612;--line:rgba(255,205,155,.13);--ink:#f7f0e4;--muted:#b6a999;--faint:#837763;
+--accent:#ff7a1a;--accent2:#ffb648;--ph:rgba(255,182,72,.16)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.9;font-size:17px;
+padding:0 18px env(safe-area-inset-bottom);background-image:radial-gradient(600px 300px at 85% -60px,rgba(255,122,26,.16),transparent 70%)}
+.wrap{max-width:620px;margin:0 auto;padding:22px 0 40px}
+header{display:flex;align-items:center;gap:10px;margin-bottom:34px}
+header img{width:38px;height:38px;border-radius:50%}
+header span{font-weight:600;color:var(--muted);font-size:15px;direction:ltr}
+.kicker{color:var(--accent);font-weight:800;font-size:15px;margin-bottom:8px}
+h1{font-size:clamp(32px,9vw,46px);line-height:1.35;font-weight:800;margin-bottom:12px}
+.sub{color:var(--muted);font-size:18px;margin-bottom:30px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 20px;margin-bottom:16px}
+.label{display:inline-block;color:var(--accent);font-weight:800;font-size:14px;margin-bottom:4px}
+h2{font-size:23px;line-height:1.5;font-weight:800;margin-bottom:12px}
+ol.items{padding-right:0;list-style:none;counter-reset:n}
+ol.items[start]{counter-reset:n var(--s)}
+ol.items li{counter-increment:n;position:relative;padding:10px 44px 10px 0;border-top:1px solid var(--line)}
+ol.items li:first-child{border-top:0}
+ol.items li::before{content:counter(n,persian);position:absolute;right:0;top:10px;width:30px;height:30px;border-radius:50%;
+background:rgba(255,122,26,.14);color:var(--accent2);font-weight:800;font-size:15px;display:grid;place-items:center;line-height:1}
+.note{color:var(--muted);font-size:15.5px;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}
+.rule{border-color:rgba(255,122,26,.45);background:linear-gradient(160deg,rgba(255,122,26,.12),var(--card) 60%)}
+.big{font-size:23px;font-weight:800;line-height:1.6;margin:4px 0 10px}
+.line{color:var(--ink);margin-bottom:10px}
+.tip{color:var(--accent2);font-weight:600}
+.block{position:relative;background:rgba(0,0,0,.25);border:1px solid var(--line);border-radius:14px;padding:14px 14px 50px;margin-bottom:10px}
+.copy{position:absolute;left:10px;bottom:10px;font:inherit;font-size:14px;font-weight:600;color:#1a0e04;background:var(--accent2);
+border:0;border-radius:999px;padding:3px 16px;cursor:pointer}
+.copy.ok{background:#8fd18b}
+.who{font-size:13px;color:var(--faint);margin:6px 4px 2px}
+.who.me{text-align:left}
+.bubble{border-radius:18px;padding:10px 14px;max-width:88%}
+.bubble.them{background:#2a251e;border-top-right-radius:6px}
+.bubble.me{position:relative;background:rgba(255,122,26,.16);border:1px solid rgba(255,122,26,.3);margin-right:auto;border-top-left-radius:6px;padding-bottom:46px}
+.qa{padding:10px 0;border-top:1px solid var(--line)}
+.qa:first-of-type{border-top:0}
+.q{font-weight:800}
+.a{color:var(--muted)}
+ul.plain{list-style:none}ul.plain li{padding:6px 0;border-top:1px solid var(--line)}ul.plain li:first-child{border-top:0}
+.card a{color:var(--accent2);word-break:break-all}
+.cmd{font-family:ui-monospace,Consolas,monospace;font-size:13.5px;color:var(--accent2);word-break:break-all}
+.ph{background:var(--ph);color:var(--accent2);border-radius:6px;padding:0 4px}
+.how{color:var(--faint);font-size:14px;margin:-14px 0 24px}
+.end{text-align:center;margin-top:30px;padding:26px 18px;border-radius:22px;border:1px solid var(--line)}
+.end p{color:var(--muted);margin-bottom:14px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;color:#1a0e04;background:linear-gradient(90deg,var(--accent2),var(--accent));
+border-radius:999px;padding:10px 26px;margin:4px}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line-strong,rgba(255,195,140,.3));font-weight:600}
+footer{text-align:center;color:var(--faint);font-size:13px;margin-top:22px}
+footer a{color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><img src="../assets/uo.png" alt="UO"><span>@uoagency.ir</span></header>
+<div class="kicker">هدیه‌ی UO · کلمه‌ی «کانکتور»</div>
+<h1>۵ کانکتور Claude و طرز وصل کردنشون</h1>
+<p class="sub">دو راه داری: با چند کلیک توی خود اپ Claude، یا با یه پرامپت توی Claude Code.</p>
+<p class="how">متن‌هایی که دکمه‌ی «کپی» دارن رو با یه لمس بردار.</p>
+<section class="card"><div class="label">قبل از شروع</div><h2>این‌ها رو آماده کن</h2><ol class="items"><li>VPN روشن، چون Claude و ثبت‌نام این سرویس‌ها از ایران باز نمیشه.</li><li>توی پلن رایگان Claude فقط یه کانکتور دلخواه می‌تونی اضافه کنی. برای هر پنج‌تا، پلن پولی لازمه.</li><li>Firecrawl و PostHog و Composio پلن رایگان دارن و برای شروع کافیه.</li><li>Perplexity کلید API می‌خواد که پولیه. اگه کارت خارجی نداری ازش بگذر، Claude خودش هم توی اینترنت جستجو می‌کنه.</li></ol><p class="note">Perplexity و Playwright روی کامپیوتر خودت اجرا میشن، پس اون دوتا فقط با Claude Code وصل میشن.</p></section><section class="card"><div class="label">راه ۱ · بدون کد</div><h2>از توی اپ Claude</h2><ol class="items"><li>برو Settings و بعد Connectors.</li><li>Firecrawl رو توی لیست کانکتورها پیدا کن و Connect رو بزن.</li><li>برای PostHog دکمه‌ی Add custom connector رو بزن و این آدرس رو بذار:<br><bdi dir="ltr">https://mcp.posthog.com/mcp</bdi></li><li>برای Composio هم همین کارو بکن با این آدرس:<br><bdi dir="ltr">https://connect.composio.dev/mcp</bdi></li><li>Connect رو بزن. یه صفحه باز میشه، وارد حسابت شو و اجازه بده.</li></ol><p class="note">Client ID و Secret رو خالی بذار. لازم نیست.</p></section><section class="card"><div class="label">راه ۲ · Claude Code</div><h2>این پرامپتو یه بار پیست کن</h2><div class="block"><p>این پنج کانکتور (MCP) رو برام توی Claude Code نصب کن. یکی‌یکی برو و قبل از هر کدوم بگو داری چیکار می‌کنی. اگه Node.js نصب نیست، اول اونو نصب کن.<br><br>۱. Perplexity: اول ازم کلید API بپرس. اگه گفتم ندارم، ازش بگذر.<br><bdi dir="ltr" class="cmd">claude mcp add --scope user perplexity --env PERPLEXITY_API_KEY=<span class="ph">کلید</span> -- npx -y @perplexity-ai/mcp-server</bdi><br><br>۲. Firecrawl:<br><bdi dir="ltr" class="cmd">claude mcp add --transport http --scope user firecrawl <bdi dir="ltr">https://mcp.firecrawl.dev/v2/mcp-oauth</bdi></bdi><br><br>۳. PostHog:<br><bdi dir="ltr" class="cmd">claude mcp add --transport http --scope user posthog <bdi dir="ltr">https://mcp.posthog.com/mcp</bdi></bdi><br><br>۴. Playwright:<br><bdi dir="ltr" class="cmd">claude mcp add --scope user playwright -- npx @playwright/mcp@latest</bdi><br><br>۵. Composio:<br><bdi dir="ltr" class="cmd">claude mcp add --transport http --scope user composio <bdi dir="ltr">https://connect.composio.dev/mcp</bdi></bdi><br><br>آخر کار بگو کدوما نصب شدن، و بگو Claude Code رو ببندم و دوباره باز کنم، بعد /mcp رو بزنم و برای Firecrawl و PostHog و Composio توی مرورگر وارد حسابم بشم.</p><button class="copy" type="button" data-copy="این پنج کانکتور (MCP) رو برام توی Claude Code نصب کن. یکی‌یکی برو و قبل از هر کدوم بگو داری چیکار می‌کنی. اگه Node.js نصب نیست، اول اونو نصب کن.
+
+۱. Perplexity: اول ازم کلید API بپرس. اگه گفتم ندارم، ازش بگذر.
+claude mcp add --scope user perplexity --env PERPLEXITY_API_KEY=[کلید] -- npx -y @perplexity-ai/mcp-server
+
+۲. Firecrawl:
+claude mcp add --transport http --scope user firecrawl https://mcp.firecrawl.dev/v2/mcp-oauth
+
+۳. PostHog:
+claude mcp add --transport http --scope user posthog https://mcp.posthog.com/mcp
+
+۴. Playwright:
+claude mcp add --scope user playwright -- npx @playwright/mcp@latest
+
+۵. Composio:
+claude mcp add --transport http --scope user composio https://connect.composio.dev/mcp
+
+آخر کار بگو کدوما نصب شدن، و بگو Claude Code رو ببندم و دوباره باز کنم، بعد /mcp رو بزنم و برای Firecrawl و PostHog و Composio توی مرورگر وارد حسابم بشم.">کپی</button></div><p class="note">هر پنج‌تا رو با هم نصب می‌کنه. هر جا کلید یا ورود لازم بود، ازت می‌پرسه.</p></section><section class="card"><div class="label">تستش کن</div><h2>با هر کدوم یه کار واقعی بخواه</h2><div class="block"><p>«با Perplexity تحقیق کن این هفته توی <span class="ph">حوزه‌ی کارم</span> چه خبرهای مهمی بوده و منبع هر خبر رو هم بده.»</p><button class="copy" type="button" data-copy="«با Perplexity تحقیق کن این هفته توی [حوزه‌ی کارم] چه خبرهای مهمی بوده و منبع هر خبر رو هم بده.»">کپی</button></div><div class="block"><p>«با Firecrawl سایت <span class="ph">آدرس سایت رقیب</span> رو بخون و بگو چی می‌فروشه، قیمت‌هاش چنده و صفحه‌ی اولش چی میگه.»</p><button class="copy" type="button" data-copy="«با Firecrawl سایت [آدرس سایت رقیب] رو بخون و بگو چی می‌فروشه، قیمت‌هاش چنده و صفحه‌ی اولش چی میگه.»">کپی</button></div><div class="block"><p>«از PostHog بگو هفته‌ی پیش بیشتر کاربرا کجای سایتم ول کردن و رفتن.»</p><button class="copy" type="button" data-copy="«از PostHog بگو هفته‌ی پیش بیشتر کاربرا کجای سایتم ول کردن و رفتن.»">کپی</button></div><div class="block"><p>«با Playwright سایت خودم <span class="ph">آدرس</span> رو باز کن، فرم تماس رو با اطلاعات تستی پر کن و بگو کجاش گیر داشت.»</p><button class="copy" type="button" data-copy="«با Playwright سایت خودم [آدرس] رو باز کن، فرم تماس رو با اطلاعات تستی پر کن و بگو کجاش گیر داشت.»">کپی</button></div><div class="block"><p>«با Composio ایمیل‌های امروز جیمیلم رو بخون و خلاصه‌شونو توی یه Google Sheet بنویس.»</p><button class="copy" type="button" data-copy="«با Composio ایمیل‌های امروز جیمیلم رو بخون و خلاصه‌شونو توی یه Google Sheet بنویس.»">کپی</button></div><p class="note">PostHog فقط وقتی جواب میده که کدش روی سایتت نصب باشه.</p></section><section class="card rule"><div class="label">یه نکته</div><p class="big">کانکتور زیادی Claude رو کند می‌کنه.</p><p class="line">هر کانکتور لیست ابزارهاشو می‌ذاره توی حافظه‌ی Claude، حتی وقتی ازش استفاده نمی‌کنی.</p><p class="tip">فقط اونایی رو روشن نگه دار که این هفته لازمشون داری.</p></section>
+<div class="end">
+<p>هر هفته یه چیز به‌دردبخور دیگه برای کسب‌وکارت می‌ذاریم.</p>
+<a class="btn" href="https://instagram.com/uoagency.ir">فالو <bdi dir="ltr">@uoagency.ir</bdi></a>
+<a class="btn ghost" id="share" href="#">بفرست برای یه دوست</a>
+</div>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+  var t=b.getAttribute('data-copy');
+  function done(){b.textContent='کپی شد';b.classList.add('ok');setTimeout(function(){b.textContent='کپی';b.classList.remove('ok')},1600)}
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,fallback)}else{fallback()}
+  function fallback(){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();
+    try{document.execCommand('copy');done()}catch(e){}a.remove()}
+})});
+var sh=document.getElementById('share');
+if(sh){if(navigator.share){sh.addEventListener('click',function(e){e.preventDefault();
+  navigator.share({title:document.title,url:location.href}).catch(function(){})})}else{sh.remove()}}
+</script>
+</body>
+</html>
