@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>کلیپ GTA 6 با Claude: نصب و استفاده از ClipKaro · هدیه‌ی UO</title>
+<meta name="description" content="لینک ویدیو یا استریم رو میدی، Claude داغ‌ترین لحظه‌ها رو پیدا می‌کنه و کلیپ عمودی ادیت‌شده تحویل میده.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="کلیپ GTA 6 با Claude: نصب و استفاده از ClipKaro">
+<meta property="og:description" content="لینک ویدیو یا استریم رو میدی، Claude داغ‌ترین لحظه‌ها رو پیدا می‌کنه و کلیپ عمودی ادیت‌شده تحویل میده.">
+<meta property="og:image" content="https://uoagency.github.io/klip/cover.png">
+<meta name="theme-color" content="#0f0e0c">
+<link rel="icon" href="../assets/uo.png">
+<link rel="preload" href="../assets/Vazirmatn-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Vazirmatn;src:url(../assets/Vazirmatn-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Vazirmatn;src:url(../assets/Vazirmatn-SemiBold.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:Vazirmatn;src:url(../assets/Vazirmatn-Bold.woff2) format("woff2");font-weight:800;font-display:swap}
+:root{--bg:#0f0e0c;--card:#191612;--line:rgba(255,205,155,.13);--ink:#f7f0e4;--muted:#b6a999;--faint:#837763;
+--accent:#ff7a1a;--accent2:#ffb648;--ph:rgba(255,182,72,.16)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font-family:Vazirmatn,Tahoma,sans-serif;line-height:1.9;font-size:17px;
+padding:0 18px env(safe-area-inset-bottom);background-image:radial-gradient(600px 300px at 85% -60px,rgba(255,122,26,.16),transparent 70%)}
+.wrap{max-width:620px;margin:0 auto;padding:22px 0 40px}
+header{display:flex;align-items:center;gap:10px;margin-bottom:34px}
+header img{width:38px;height:38px;border-radius:50%}
+header span{font-weight:600;color:var(--muted);font-size:15px;direction:ltr}
+.kicker{color:var(--accent);font-weight:800;font-size:15px;margin-bottom:8px}
+h1{font-size:clamp(32px,9vw,46px);line-height:1.35;font-weight:800;margin-bottom:12px}
+.sub{color:var(--muted);font-size:18px;margin-bottom:30px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px 20px;margin-bottom:16px}
+.label{display:inline-block;color:var(--accent);font-weight:800;font-size:14px;margin-bottom:4px}
+h2{font-size:23px;line-height:1.5;font-weight:800;margin-bottom:12px}
+ol.items{padding-right:0;list-style:none;counter-reset:n}
+ol.items[start]{counter-reset:n var(--s)}
+ol.items li{counter-increment:n;position:relative;padding:10px 44px 10px 0;border-top:1px solid var(--line)}
+ol.items li:first-child{border-top:0}
+ol.items li::before{content:counter(n,persian);position:absolute;right:0;top:10px;width:30px;height:30px;border-radius:50%;
+background:rgba(255,122,26,.14);color:var(--accent2);font-weight:800;font-size:15px;display:grid;place-items:center;line-height:1}
+.note{color:var(--muted);font-size:15.5px;margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}
+.rule{border-color:rgba(255,122,26,.45);background:linear-gradient(160deg,rgba(255,122,26,.12),var(--card) 60%)}
+.big{font-size:23px;font-weight:800;line-height:1.6;margin:4px 0 10px}
+.line{color:var(--ink);margin-bottom:10px}
+.tip{color:var(--accent2);font-weight:600}
+.block{position:relative;background:rgba(0,0,0,.25);border:1px solid var(--line);border-radius:14px;padding:14px 14px 50px;margin-bottom:10px}
+.copy{position:absolute;left:10px;bottom:10px;font:inherit;font-size:14px;font-weight:600;color:#1a0e04;background:var(--accent2);
+border:0;border-radius:999px;padding:3px 16px;cursor:pointer}
+.copy.ok{background:#8fd18b}
+.who{font-size:13px;color:var(--faint);margin:6px 4px 2px}
+.who.me{text-align:left}
+.bubble{border-radius:18px;padding:10px 14px;max-width:88%}
+.bubble.them{background:#2a251e;border-top-right-radius:6px}
+.bubble.me{position:relative;background:rgba(255,122,26,.16);border:1px solid rgba(255,122,26,.3);margin-right:auto;border-top-left-radius:6px;padding-bottom:46px}
+.qa{padding:10px 0;border-top:1px solid var(--line)}
+.qa:first-of-type{border-top:0}
+.q{font-weight:800}
+.a{color:var(--muted)}
+ul.plain{list-style:none}ul.plain li{padding:6px 0;border-top:1px solid var(--line)}ul.plain li:first-child{border-top:0}
+.card a{color:var(--accent2);word-break:break-all}
+.cmd{font-family:ui-monospace,Consolas,monospace;font-size:13.5px;color:var(--accent2);word-break:break-all}
+.cmd .ph{word-break:normal;white-space:nowrap}
+.ph{background:var(--ph);color:var(--accent2);border-radius:6px;padding:0 4px}
+.how{color:var(--faint);font-size:14px;margin:-14px 0 24px}
+.end{text-align:center;margin-top:30px;padding:26px 18px;border-radius:22px;border:1px solid var(--line)}
+.end p{color:var(--muted);margin-bottom:14px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;color:#1a0e04;background:linear-gradient(90deg,var(--accent2),var(--accent));
+border-radius:999px;padding:10px 26px;margin:4px}
+.btn.ghost{background:none;color:var(--ink);border:1px solid var(--line-strong,rgba(255,195,140,.3));font-weight:600}
+footer{text-align:center;color:var(--faint);font-size:13px;margin-top:22px}
+footer a{color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><img src="../assets/uo.png" alt="UO"><span>@uoagency.ir</span></header>
+<div class="kicker">هدیه‌ی UO · کلمه‌ی «کلیپ»</div>
+<h1>کلیپ GTA 6 با Claude: نصب و استفاده از ClipKaro</h1>
+<p class="sub">لینک ویدیو یا استریم رو میدی، Claude داغ‌ترین لحظه‌ها رو پیدا می‌کنه و کلیپ عمودی ادیت‌شده تحویل میده.</p>
+<p class="how">متن‌هایی که دکمه‌ی «کپی» دارن رو با یه لمس بردار.</p>
+<section class="card"><div class="label">قبل از شروع</div><h2>اینا رو چک کن</h2><ol class="items"><li>ClipKaro رایگان و متن‌بازه:<br><a href="https://github.com/allthingsaman/ClipKaro" dir="ltr">github.com/allthingsaman/ClipKaro</a></li><li>ویندوز، مک یا لینوکس ۶۴ بیتی با ۸ گیگ رم کافیه. کارت گرافیک NVIDIA با ۴ گیگ خیلی کمک می‌کنه؛ بدونش هر ویدیو ممکنه یکی دو ساعت طول بکشه.</li><li>Claude Code با پلن Pro به بالا. پلن پولی نداری؟ بخش «راه مجانی» رو ببین.</li><li>VPN روشن، چون Claude و دانلود از یوتیوب از ایران باز نمیشن.</li></ol><p class="note">چت معمولی claude.ai به کامپیوترت دسترسی نداره، پس با اون کار نمی‌کنه. باید Claude Code باشه.</p></section><section class="card"><div class="label">نصب (یه بار)</div><h2>اینو توی Claude Code پیست کن</h2><div class="block"><p>می‌خوام ابزار ClipKaro رو روی کامپیوترم راه بندازی تا از استریم‌ها و ویدیوهای GTA 6 کلیپ بگیرم.<br><bdi dir="ltr" class="cmd">install this repo: <a href="https://github.com/allthingsaman/ClipKaro" dir="ltr">github.com/allthingsaman/ClipKaro</a></bdi><br>۱. پوشه‌ش رو توی پوشه‌ی کاربرم بساز، نه توی Documents یا Desktop که OneDrive ازشون بکاپ می‌گیره.<br>۲. چک کن Python 3.12، FFmpeg، Node.js و Git نصب هستن. هر کدوم نبود، دستور نصبشو بهم بده.<br>۳. install.py رو اجرا کن تا همه‌ی خط‌ها ok بشن.<br>۴. بگو کارت گرافیک NVIDIA دارم یا نه و هر ویدیو چقدر طول می‌کشه.<br>۵. برای زیرنویس فارسی فونت Vazirmatn رو اضافه کن و چک کن زیرنویس راست‌چین و چسبیده درمیاد.<br>۶. آخرش بگو Claude Code رو ببندم و از داخل پوشه‌ی ClipKaro دوباره باز کنم.</p><button class="copy" type="button" data-copy="می‌خوام ابزار ClipKaro رو روی کامپیوترم راه بندازی تا از استریم‌ها و ویدیوهای GTA 6 کلیپ بگیرم.
+install this repo: https://github.com/allthingsaman/ClipKaro
+۱. پوشه‌ش رو توی پوشه‌ی کاربرم بساز، نه توی Documents یا Desktop که OneDrive ازشون بکاپ می‌گیره.
+۲. چک کن Python 3.12، FFmpeg، Node.js و Git نصب هستن. هر کدوم نبود، دستور نصبشو بهم بده.
+۳. install.py رو اجرا کن تا همه‌ی خط‌ها ok بشن.
+۴. بگو کارت گرافیک NVIDIA دارم یا نه و هر ویدیو چقدر طول می‌کشه.
+۵. برای زیرنویس فارسی فونت Vazirmatn رو اضافه کن و چک کن زیرنویس راست‌چین و چسبیده درمیاد.
+۶. آخرش بگو Claude Code رو ببندم و از داخل پوشه‌ی ClipKaro دوباره باز کنم.">کپی</button></div><p class="note">هر جا رمز کامپیوترت لازم شد، دستورشو میده خودت بزنی.</p></section><section class="card"><div class="label">یوتیوب روی ویندوز</div><h2>یه بار فایل کوکی بساز (۲ دقیقه)</h2><ol class="items"><li>توی مرورگری که با یوتیوب واردش شدی، افزونه‌ی Get cookies.txt LOCALLY رو نصب کن.</li><li>برو youtube.com، روی افزونه بزن و Export رو بزن.</li><li>فایلی که ذخیره شد رو بذار توی پوشه‌ی ClipKaro، کنار فایل run.py.</li></ol><p class="note">بدون این فایل یوتیوب ممکنه بگه Sign in to confirm you&#x27;re not a bot و کار نصفه بمونه.</p></section><section class="card"><div class="label">هر بار</div><h2>Claude Code رو توی پوشه‌ی ClipKaro باز کن و بنویس</h2><div class="block"><p><bdi dir="ltr" class="cmd">clip this video: <span class="ph">لینک ویدیو یا استریم GTA 6</span></bdi><br><br>این یه استریم گیمه. ۵ تا کلیپ بین ۲۰ تا ۴۵ ثانیه از هیجانی‌ترین لحظه‌ها بساز: تعقیب، تصادف، شکست خنده‌دار، یا جایی که استریمر داد می‌زنه یا می‌خنده.<br>هر کلیپ از وسط اکشن شروع بشه، نه با مقدمه. بازی بالای صفحه، صورت استریمر پایینش، اسم استریمر گوشه‌ی کلیپ.<br>برای هر کلیپ یه تیتر هوک و یه کپشن کوتاه فارسی بنویس و بگو چرا انتخابش کردی.</p><button class="copy" type="button" data-copy="clip this video: [لینک ویدیو یا استریم GTA 6]
+
+این یه استریم گیمه. ۵ تا کلیپ بین ۲۰ تا ۴۵ ثانیه از هیجانی‌ترین لحظه‌ها بساز: تعقیب، تصادف، شکست خنده‌دار، یا جایی که استریمر داد می‌زنه یا می‌خنده.
+هر کلیپ از وسط اکشن شروع بشه، نه با مقدمه. بازی بالای صفحه، صورت استریمر پایینش، اسم استریمر گوشه‌ی کلیپ.
+برای هر کلیپ یه تیتر هوک و یه کپشن کوتاه فارسی بنویس و بگو چرا انتخابش کردی.">کپی</button></div><p class="note">سهمیه‌ت کمه؟ به جای clip this بنویس quick clip this؛ نصف مصرف رو داره.</p></section><section class="card"><div class="label">راه مجانی</div><h2>پلن پولی Claude نداری؟ Google Antigravity</h2><ol class="items"><li>Antigravity رو از antigravity.google نصب کن و با حساب گوگلت وارد شو. نسخه‌ی رایگان داره.</li><li>یه پوشه رو توش باز کن و همون پرامپت بخش «نصب» رو بهش بده.</li><li>بعد پوشه‌ی ClipKaro رو باز کن و همون پرامپت بخش «هر بار» رو بزن.</li></ol><p class="note">سهمیه‌ی رایگانش هفتگیه و معمولاً برای یه ویدیو توی هر جلسه کافیه.</p></section><section class="card rule"><div class="label">قبل از پست</div><p class="big">فقط از استریمرایی کلیپ بگیر که اجازه میدن.</p><p class="line">قوانین کانال یا توضیحات استریم رو بخون. خیلی‌ها کلیپ رو آزاد گذاشتن، بعضیا نه.</p><p class="tip">اسم استریمر رو روی کلیپ و توی کپشن بذار.</p></section>
+<div class="end">
+<p>هر هفته یه چیز به‌دردبخور دیگه برای کسب‌وکارت می‌ذاریم.</p>
+<a class="btn" href="https://instagram.com/uoagency.ir">فالو <bdi dir="ltr">@uoagency.ir</bdi></a>
+<a class="btn ghost" id="share" href="#">بفرست برای یه دوست</a>
+</div>
+</div>
+<script>
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){
+  var t=b.getAttribute('data-copy');
+  function done(){b.textContent='کپی شد';b.classList.add('ok');setTimeout(function(){b.textContent='کپی';b.classList.remove('ok')},1600)}
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(done,fallback)}else{fallback()}
+  function fallback(){var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();
+    try{document.execCommand('copy');done()}catch(e){}a.remove()}
+})});
+var sh=document.getElementById('share');
+if(sh){if(navigator.share){sh.addEventListener('click',function(e){e.preventDefault();
+  navigator.share({title:document.title,url:location.href}).catch(function(){})})}else{sh.remove()}}
+</script>
+</body>
+</html>
